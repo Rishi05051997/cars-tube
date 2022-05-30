@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthProvider";
 import { useData } from "../../context/DataProvider";
-import { disLikeVideoBasedBasedOnVideoId, RemovedVideoFromWatchLater, RemoveVideoFromHistory, removeVideoFromSelectedPlaylist } from "../../services";
+import { disLikeVideoBasedOnVideoId, RemovedVideoFromWatchLater, RemoveVideoFromHistory, removeVideoFromSelectedPlaylist } from "../../services";
 import { Pallet } from "../Pallet/Pallet";
 import "./videocard.css"
 export const VideoCard = ({ video, removeUIcon, action, playlistId }) => {
@@ -21,7 +21,7 @@ export const VideoCard = ({ video, removeUIcon, action, playlistId }) => {
     const removeHandler = (dispatch, video, token, action, playlistId) => {
         switch (action) {
             case "REMOVE-FROM-LIKE":
-                disLikeVideoBasedBasedOnVideoId(dispatch, video, token)
+                disLikeVideoBasedOnVideoId(dispatch, video, token)
                 break;
             case "REMOVE-FROM-WATCH-LATER":
                 RemovedVideoFromWatchLater(dispatch, video, token)
